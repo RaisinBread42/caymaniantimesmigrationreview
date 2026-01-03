@@ -1,0 +1,389 @@
+{
+  "analysis_date": "2026-01-03",
+  "domain": "caymaniantimes.ky",
+  "site_type": "News/Media Publication",
+
+  "tech_stack": {
+    "backend": {
+      "language": "PHP",
+      "confidence": "High",
+      "evidence": ["ZoomInfo technology profile", "index.php visible in URLs"],
+      "cms": {
+        "platform": "Custom PHP CMS (likely)",
+        "confidence": "Medium",
+        "notes": "No WordPress indicators found (no wp-content, wp-admin paths). URL structure suggests custom PHP or PHP framework-based CMS."
+      }
+    },
+    "frontend": {
+      "framework": "Unknown - requires direct inspection",
+      "likely_libraries": ["jQuery (typical for PHP sites)", "Bootstrap or similar CSS framework"],
+      "confidence": "Low - inference based"
+    },
+    "hosting": {
+      "provider": "OVH SAS",
+      "web_server": "Apache",
+      "ip_address": "149.56.185.76",
+      "cdn": "Cloudflare",
+      "nameservers": ["grace.ns.cloudflare.com", "wesley.ns.cloudflare.com"],
+      "dnssec": false,
+      "confidence": "High"
+    },
+    "analytics_tracking": {
+      "google_adsense": true,
+      "recaptcha": true,
+      "bullhorn": true,
+      "confidence": "High",
+      "source": "ZoomInfo technology profile"
+    }
+  },
+
+  "site_structure": {
+    "url_patterns": {
+      "homepage": "/",
+      "news_list": "/news",
+      "category": "/news-category/{category-slug}",
+      "article": "/news/{article-slug}",
+      "archives": "/archives",
+      "alternative_php": "/index.php/news-category/{category}"
+    },
+    "main_sections": [
+      {"name": "News", "path": "/news", "type": "listing"},
+      {"name": "Local News", "path": "/news-category/local-news", "type": "category"},
+      {"name": "International", "path": "/news-category/international", "type": "category"},
+      {"name": "Regional", "path": "/news-category/regional", "type": "category"},
+      {"name": "Politics", "path": "/news-category/politics", "type": "category"},
+      {"name": "Business", "path": "/news-category/business", "type": "category"},
+      {"name": "Editorial", "path": "/news-category/editorial", "type": "category"},
+      {"name": "Front Pages", "path": "/news-category/front-pages", "type": "category"},
+      {"name": "Sports", "path": "/news-category/sports", "type": "category"},
+      {"name": "Health Care", "path": "/news-category/health-care", "type": "category"},
+      {"name": "Entertainment", "path": "/news-category/entertainment", "type": "category"},
+      {"name": "Environment", "path": "/news-category/environment", "type": "category"},
+      {"name": "Tourism", "path": "/news-category/tourism", "type": "category"},
+      {"name": "Education", "path": "/news-category/education", "type": "category"},
+      {"name": "Employment", "path": "/news-category/employment", "type": "category"},
+      {"name": "Development", "path": "/news-category/development", "type": "category"},
+      {"name": "Cost of Living", "path": "/news-category/cost-of-living", "type": "category"},
+      {"name": "Hurricane Watch", "path": "/news-category/hurricane-watch", "type": "category"},
+      {"name": "Community Voice", "path": "/news-category/community-voice", "type": "category"},
+      {"name": "Law Enforcement", "path": "/news-category/law-enforcement", "type": "category"},
+      {"name": "Government", "path": "/news-category/government", "type": "category"}
+    ],
+    "special_sections": [
+      {"name": "Archives", "path": "/archives", "type": "PDF downloads by month"},
+      {"name": "Video News Release", "path": "/video-news-release", "type": "video content"},
+      {"name": "Personal Classifieds", "path": "/personal-classifieds", "type": "user listings"},
+      {"name": "Featured Classifieds", "path": "/featured-classifieds", "type": "premium listings"},
+      {"name": "Advertising", "path": "/advertising", "type": "rate info"},
+      {"name": "Upload Advertisements", "path": "/advertise-with-us", "type": "form submission"},
+      {"name": "Gas Prices", "path": "/gas-prices", "type": "data/utility"},
+      {"name": "Community Calendar", "path": "/news/community-calendar", "type": "events"},
+      {"name": "Contact Us", "path": "/contact-us", "type": "contact form"},
+      {"name": "About Us", "path": "/about-us", "type": "static page"}
+    ],
+    "subdomains": [
+      {"name": "Job Market", "url": "jobmarket.caymaniantimes.ky", "purpose": "Employment listings portal"}
+    ],
+    "shortlink": "ctimes.ky"
+  },
+
+  "key_features": {
+    "content_management": {
+      "article_publishing": true,
+      "category_taxonomy": true,
+      "pdf_archives": {
+        "enabled": true,
+        "format": "Monthly PDF editions",
+        "purpose": "Print replica archives"
+      },
+      "video_content": {
+        "enabled": true,
+        "type": "Video News Releases (VNR)",
+        "details": "Dedicated VNR section for video content"
+      }
+    },
+    "user_interaction": {
+      "comments": {
+        "enabled": true,
+        "requires_login": false,
+        "email_required": false,
+        "moderation": "Pre-publication review",
+        "identity_options": ["Pseudonym", "Real name"]
+      },
+      "newsletter": {
+        "enabled": true,
+        "contact": "ctimesonline@caymaniantimes.ky"
+      }
+    },
+    "advertising": {
+      "google_adsense": true,
+      "display_advertising": true,
+      "classified_ads": {
+        "free_classifieds": true,
+        "featured_classifieds": true,
+        "categories": ["Property Rentals", "Vehicles", "Services", "Real Estate", "Furniture", "Office"]
+      },
+      "ad_upload_form": true
+    },
+    "job_market": {
+      "enabled": true,
+      "separate_subdomain": true,
+      "url": "jobmarket.caymaniantimes.ky",
+      "contact": "jobmarket@caymaniantimes.ky",
+      "features": ["Job listings", "Ad upload", "Category browsing (e.g., Teachers)"]
+    },
+    "spam_protection": {
+      "recaptcha": true
+    },
+    "recruitment_integration": {
+      "bullhorn": {
+        "enabled": true,
+        "purpose": "Applicant tracking / recruitment CRM integration"
+      }
+    }
+  },
+
+  "third_party_integrations": {
+    "advertising": ["Google AdSense"],
+    "spam_protection": ["Google reCAPTCHA"],
+    "recruitment": ["Bullhorn ATS"],
+    "cdn_security": ["Cloudflare"],
+    "analytics": "Unknown - likely Google Analytics (typical for AdSense sites)"
+  },
+
+  "migration_considerations": {
+    "complexity_assessment": "MEDIUM-HIGH",
+
+    "content_scope": {
+      "articles": {
+        "volume": "10+ years of content (2013-present)",
+        "structure": "Category-based taxonomy with 20+ categories",
+        "complexity": "Standard news articles with text/images"
+      },
+      "pdf_archives": {
+        "volume": "Monthly editions since 2016",
+        "format": "PDF files",
+        "migration_approach": "File migration + metadata extraction or linking"
+      },
+      "classifieds": {
+        "types": ["Free personal", "Featured/paid"],
+        "data": "User submissions with category metadata"
+      },
+      "jobs": {
+        "separate_system": true,
+        "considerations": "May require separate migration or integration"
+      }
+    },
+
+    "technical_dependencies": [
+      {
+        "component": "PHP Backend",
+        "replacement_options": ["Keep PHP (Laravel/WordPress)", "Node.js", "Python/Django", "Headless CMS"],
+        "migration_effort": "HIGH - requires complete rewrite unless staying PHP"
+      },
+      {
+        "component": "Custom CMS",
+        "replacement_options": ["WordPress", "Ghost", "Strapi", "Sanity", "Custom"],
+        "considerations": "Need to map current content model to new system"
+      },
+      {
+        "component": "Google AdSense",
+        "replacement_options": ["Keep AdSense", "Alternative ad networks"],
+        "migration_effort": "LOW - just script/config changes"
+      },
+      {
+        "component": "reCAPTCHA",
+        "replacement_options": ["Keep reCAPTCHA", "hCaptcha", "Cloudflare Turnstile"],
+        "migration_effort": "LOW"
+      },
+      {
+        "component": "Bullhorn Integration",
+        "replacement_options": ["Keep Bullhorn", "Alternative ATS", "Custom job board"],
+        "migration_effort": "MEDIUM-HIGH - API integration work",
+        "notes": "Bullhorn is specifically for job/recruitment functionality"
+      },
+      {
+        "component": "Cloudflare CDN/DNS",
+        "replacement_options": ["Keep Cloudflare (recommended)", "Alternative CDN"],
+        "migration_effort": "LOW - DNS changes only"
+      },
+      {
+        "component": "Comment System",
+        "replacement_options": ["Disqus", "Built-in", "Commento", "Custom"],
+        "migration_effort": "MEDIUM - need to migrate existing comments"
+      }
+    ],
+
+    "data_migration_scope": {
+      "articles": {
+        "content": "HTML/text content",
+        "metadata": "Title, date, category, author, slug",
+        "media": "Images embedded in articles"
+      },
+      "categories": "Taxonomy structure with 20+ news categories",
+      "pdf_archives": "Monthly PDF files with dates",
+      "classifieds": "Listings with categories, contact info, descriptions",
+      "jobs": "Separate subdomain - may require standalone migration",
+      "comments": "User comments with pseudonyms/names (no emails)",
+      "static_pages": "About, Contact, Advertising info, etc."
+    },
+
+    "feature_equivalents_needed": [
+      {
+        "feature": "Category-based news browsing",
+        "standard_solution": "Any CMS with taxonomy support"
+      },
+      {
+        "feature": "PDF Archive downloads",
+        "standard_solution": "Media library + custom archive page"
+      },
+      {
+        "feature": "Video News Releases",
+        "standard_solution": "Video embed support (YouTube/Vimeo) or hosted video"
+      },
+      {
+        "feature": "Classifieds system",
+        "standard_solution": "Plugin (e.g., WP Classified Ads) or custom module"
+      },
+      {
+        "feature": "Job board integration",
+        "standard_solution": "Bullhorn integration plugins or custom API work"
+      },
+      {
+        "feature": "Ad upload forms",
+        "standard_solution": "File upload forms with email/notification"
+      },
+      {
+        "feature": "Community calendar",
+        "standard_solution": "Events plugin/module"
+      },
+      {
+        "feature": "Gas price page",
+        "standard_solution": "Custom data page or integration"
+      },
+      {
+        "feature": "Comments (moderated)",
+        "standard_solution": "Native CMS comments or Disqus"
+      }
+    ],
+
+    "special_considerations": [
+      {
+        "issue": "Stingray Media Group Acquisition",
+        "details": "Effective Jan 1, 2026 - new ownership may have platform requirements",
+        "impact": "May need to integrate with Stingray's platform strategy (eCay marketplace, Stingray Rewards, radio stations)"
+      },
+      {
+        "issue": "URL preservation",
+        "details": "Current URL structure must be maintained or redirected for SEO",
+        "impact": "Redirect rules for /news-category/, /news/, /index.php/ paths"
+      },
+      {
+        "issue": "Job Market subdomain",
+        "details": "Separate subdomain may have different tech stack",
+        "impact": "May need separate migration assessment"
+      },
+      {
+        "issue": "Shortlink domain",
+        "details": "ctimes.ky used as shortlink",
+        "impact": "Must maintain redirect functionality"
+      }
+    ],
+
+    "recommended_migration_phases": [
+      {
+        "phase": 1,
+        "name": "Content Export & Analysis",
+        "tasks": [
+          "Full content audit with exact counts",
+          "Database export or scraping",
+          "Media asset inventory",
+          "URL mapping document"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Platform Selection & Setup",
+        "tasks": [
+          "Choose CMS platform",
+          "Design content model mapping",
+          "Set up staging environment",
+          "Configure hosting (can keep OVH/Cloudflare)"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Data Migration",
+        "tasks": [
+          "Migrate articles with categories",
+          "Import PDF archives",
+          "Transfer media files",
+          "Migrate static pages"
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Feature Implementation",
+        "tasks": [
+          "Implement classifieds system",
+          "Set up comment system",
+          "Configure ad integrations",
+          "Build custom features (gas prices, calendar)"
+        ]
+      },
+      {
+        "phase": 5,
+        "name": "Integration & Testing",
+        "tasks": [
+          "Bullhorn/job market integration",
+          "AdSense/reCAPTCHA setup",
+          "SEO verification",
+          "Performance testing"
+        ]
+      },
+      {
+        "phase": 6,
+        "name": "Launch",
+        "tasks": [
+          "DNS cutover",
+          "Redirect rules implementation",
+          "Monitoring setup",
+          "Post-launch fixes"
+        ]
+      }
+    ]
+  },
+
+  "company_context": {
+    "founded": "2013 (as Employment Weekly)",
+    "rebranded": "2016 (to Caymanian Times)",
+    "owner_original": "Lewis (Cayman Islands) Ltd",
+    "founder": "Ralph Lewis",
+    "acquisition": {
+      "acquirer": "Stingray Media Group",
+      "effective_date": "2026-01-01",
+      "note": "Ralph Lewis continues as publisher"
+    },
+    "traffic": {
+      "readership": "250,000+",
+      "weekly_visits": "30,000+",
+      "source": "Company statements"
+    },
+    "contact": {
+      "email": "info@caymaniantimes.ky",
+      "phone": "+1 (345) 916-2000",
+      "address": "19 Walkers Rd, George Town, Cayman Islands"
+    }
+  },
+
+  "data_sources": [
+    "ZoomInfo company profile",
+    "Web search results",
+    "URL pattern analysis",
+    "DNS/hosting lookups"
+  ],
+
+  "limitations": {
+    "note": "Direct website inspection was blocked (403 errors). Analysis based on secondary sources and publicly available information. Direct page source analysis would provide more accurate framework/library detection."
+  }
+}
